@@ -23,7 +23,7 @@
   {name: 'Goldene Rakete', desc: "", lat: 48.16141641283813, lng: 11.590515591624541, site: 'https://goldene-rakete.com'},
   {name: 'Heartbeet', desc: "", lat: 48.12683212962948, lng: 11.597053942143607, site: 'https://heartbeet.de'},
 ]
-.forEach(r => L.marker([r.lat, r.lng]).addTo(map).bindPopup(`<b>${r.name}</b><br><b>${r.desc}</b><br><a href="${r.site}" target="_blank">Website besuchen</a>`));
+.forEach(r => L.marker([r.lat, r.lng]).addTo(map).bindPopup(`<b>${r.name}</b><br><b style={font-size: 80%;}>${r.desc}</b><br><a href="${r.site}" target="_blank">Website besuchen</a>`));
   </script>
 </body>
 </html>
