@@ -19,10 +19,17 @@
       maxZoom: 25, attribution: '© OpenStreetMap contributors'
     }).addTo(map);
     [
-      {name: 'Test1', lat: 48.1400, lng: 11.5800, site: 'https://restaurant-b.example'},
-      {name: 'Test2', lat: 48.5400, lng: 11.5800, site: 'https://restaurant-b.example'},
-      {name: 'Test3', lat: 49.1400, lng: 11.5800, site: 'https://restaurant-b.example'}
-    ].forEach(r => L.marker([r.lat, r.lng]).addTo(map).bindPopup(`<b>${r.name}</b><br><a href="${r.site}" target="_blank">Website besuchen</a>`));
+  {name: 'Green Beetle', lat: 48.1389, lng: 11.5811, site: 'https://greenbeetle.de'},
+  {name: 'Goldene Rakete', lat: 48.1265, lng: 11.5707, site: 'https://goldene-rakete.com'},
+  {name: 'Heartbeet', lat: 48.1270, lng: 11.5904, site: 'https://heartbeet.de'},
+  {name: 'Xaver’s', lat: 48.1332, lng: 11.5729, site: 'https://xaver-s.de'},
+  {name: 'Milchhäusl Bio-Bistro', lat: 48.1553, lng: 11.5927, site: 'https://milchhaeusl.de'},
+  {name: 'Speisecafé Rigoletto', lat: 48.1607, lng: 11.5465, site: 'https://speisecafe-rigoletto.de'},
+  {name: 'Leo\'s Organic Kitchen', lat: 48.1368, lng: 11.5795, site: 'https://leosorganic.com'},
+  {name: 'Pizza Verde', lat: 48.1530, lng: 11.5397, site: 'https://pizzaverde.de'},
+  {name: 'Siggis', lat: 48.1366, lng: 11.5797, site: 'https://siggis.jetzt'}
+]
+.forEach(r => L.marker([r.lat, r.lng]).addTo(map).bindPopup(`<b>${r.name}</b><br><a href="${r.site}" target="_blank">Website besuchen</a>`));
   </script>
 </body>
 </html>
