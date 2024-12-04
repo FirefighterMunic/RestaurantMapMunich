@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSM Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <style>
+    #map { height: 100vh; width: 100vw;}
+    body {margin: 0; overflow: hidden;}
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([48.1351, 11.5820], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 25, attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    [
+      {name: 'Test1', lat: 48.1400, lng: 11.5800, site: 'https://restaurant-b.example'},
+      {name: 'Test2', lat: 48.5400, lng: 11.5800, site: 'https://restaurant-b.example'},
+      {name: 'Test3', lat: 49.1400, lng: 11.5800, site: 'https://restaurant-b.example'}
+    ].forEach(r => L.marker([r.lat, r.lng]).addTo(map).bindPopup(`<b>${r.name}</b><br><a href="${r.site}" target="_blank">Visit</a>`));
+  </script>
+</body>
+</html>
